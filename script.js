@@ -8,6 +8,10 @@ const drawerLinks = document.querySelectorAll(".drawer-link");
 const reveals = document.querySelectorAll(".reveal");
 const customSelects = document.querySelectorAll("[data-select]");
 const whatsappTargets = document.querySelectorAll("[data-whatsapp-link]");
+const loaderStartTime = performance.now();
+const minimumLoaderDuration = 2600;
+let loaderHideScheduled = false;
+let loaderHidden = false;
 
 const whatsappMessage = "Quero meu catalogo profissional de im\u00f3veis + blog";
 const whatsappUrl = `https://wa.me/5511964956563?text=${encodeURIComponent(whatsappMessage)}`;
@@ -175,6 +179,12 @@ document.addEventListener("click", (event) => {
 });
 
 const hideLoader = () => {
+  if (loaderHidden) {
+    return;
+  }
+
+  loaderHidden = true;
+
   if (!pageLoader) {
     document.body.classList.remove("is-loading");
     return;
@@ -184,10 +194,23 @@ const hideLoader = () => {
   document.body.classList.remove("is-loading");
 };
 
+const scheduleHideLoader = () => {
+  if (loaderHideScheduled) {
+    return;
+  }
+
+  loaderHideScheduled = true;
+
+  const elapsed = performance.now() - loaderStartTime;
+  const remaining = Math.max(0, minimumLoaderDuration - elapsed);
+
+  window.setTimeout(hideLoader, remaining);
+};
+
 setHeaderState();
 window.addEventListener("scroll", setHeaderState);
 window.addEventListener("load", () => {
-  window.setTimeout(hideLoader, 900);
+  scheduleHideLoader();
 });
 
-window.setTimeout(hideLoader, 1800);
+window.setTimeout(scheduleHideLoader, minimumLoaderDuration + 400);
