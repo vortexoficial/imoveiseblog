@@ -647,10 +647,15 @@ input {
 }
 
 .search-panel-section {
+  position: relative;
+  z-index: 40;
   padding: 16px 0 0;
 }
 
 .search-panel {
+  position: relative;
+  z-index: 2;
+  overflow: visible;
   padding: 30px;
   border-radius: var(--radius-xl);
   background: linear-gradient(135deg, rgba(240, 236, 226, 0.96), rgba(228, 220, 205, 0.92));
@@ -679,8 +684,13 @@ input {
 
 .custom-field {
   position: relative;
+  z-index: 1;
   display: grid;
   gap: 10px;
+}
+
+.custom-field.open {
+  z-index: 60;
 }
 
 .field-label {
@@ -778,6 +788,8 @@ input {
 }
 
 .carousel-section {
+  position: relative;
+  z-index: 1;
   padding: 92px 0 26px;
 }
 
