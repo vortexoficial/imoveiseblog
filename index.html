@@ -19,11 +19,17 @@
 <body class="is-loading">
   <div class="page-loader" id="pageLoader" aria-hidden="true">
     <div class="loader-stage">
-      <div class="loader-rings">
-        <span class="loader-ring loader-ring-a"></span>
-        <span class="loader-ring loader-ring-b"></span>
-        <span class="loader-ring loader-ring-c"></span>
-        <span class="loader-core"></span>
+      <div class="loader-house-wrap">
+        <svg class="loader-house" viewBox="0 0 160 160" role="img" aria-label="Carregando">
+          <path class="house-outline roof-outline" d="M30 76L80 34L130 76" />
+          <path class="house-outline body-outline" d="M46 72V122H114V72" />
+          <path class="house-outline door-outline" d="M72 122V92H88V122" />
+          <path class="house-fill" d="M80 44L54 66V116H106V66L80 44Z" />
+          <path class="house-window" d="M62 78H74V90H62Z" />
+          <path class="house-window" d="M86 78H98V90H86Z" />
+          <path class="house-ground" d="M28 126H132" />
+        </svg>
+        <span class="loader-glow"></span>
       </div>
       <div class="loader-copy">
         <strong>LuxPrime</strong>
@@ -465,51 +471,85 @@
               <span>Mercado de luxo</span>
               <h3>O que compradores de alto padrao avaliam antes de decidir por um imovel</h3>
               <p>Localizacao, privacidade, qualidade construtiva, potencial de valorizacao e liquidez seguem entre os fatores que mais pesam na decisao.</p>
+              <div class="blog-feature-meta">
+                <span>Leitura de 6 min</span>
+                <span>Curadoria LuxPrime</span>
+              </div>
               <a class="btn btn-primary" data-whatsapp-link href="#">Falar com especialista</a>
             </div>
           </article>
 
           <div class="blog-grid">
             <article class="blog-card reveal">
+              <div class="blog-card-media">
+                <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80" alt="Fachada contemporanea de residencia de alto padrao" />
+              </div>
+              <div class="blog-card-copy">
               <span>Arquitetura</span>
               <h3>Tendencias de fachadas contemporaneas para residencias exclusivas</h3>
               <p>Volumes bem definidos, materiais nobres e iluminacao arquitetonica continuam entre os principais destaques do segmento.</p>
               <a class="btn btn-link" data-whatsapp-link href="#">Saiba mais</a>
+              </div>
             </article>
 
             <article class="blog-card reveal">
+              <div class="blog-card-media">
+                <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1200&q=80" alt="Vista de bairro nobre com edificios residenciais" />
+              </div>
+              <div class="blog-card-copy">
               <span>Mercado</span>
               <h3>Como localizacao e escassez influenciam o valor de um imovel premium</h3>
               <p>Endereco, privacidade e oferta limitada ajudam a sustentar demanda e valorizacao em regioes consolidadas.</p>
               <a class="btn btn-link" data-whatsapp-link href="#">Saiba mais</a>
+              </div>
             </article>
 
             <article class="blog-card reveal">
+              <div class="blog-card-media">
+                <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1200&q=80" alt="Casa moderna com jardim e area externa" />
+              </div>
+              <div class="blog-card-copy">
               <span>Investimento</span>
               <h3>O que observar antes de investir em uma casa de alto padrao</h3>
               <p>Liquidez, padrao construtivo, manutencao e perspectiva de crescimento da regiao merecem analise detalhada.</p>
               <a class="btn btn-link" data-whatsapp-link href="#">Saiba mais</a>
+              </div>
             </article>
 
             <article class="blog-card reveal">
+              <div class="blog-card-media">
+                <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80" alt="Sala integrada com design sofisticado" />
+              </div>
+              <div class="blog-card-copy">
               <span>Interiores</span>
               <h3>Ambientes integrados seguem em alta nas residencias de luxo</h3>
               <p>Plantas abertas, conexao com a area externa e solucao de automacao elevam conforto e experiencia de uso.</p>
               <a class="btn btn-link" data-whatsapp-link href="#">Saiba mais</a>
+              </div>
             </article>
 
             <article class="blog-card reveal">
+              <div class="blog-card-media">
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80" alt="Corretor apresentando imovel para cliente" />
+              </div>
+              <div class="blog-card-copy">
               <span>Vendas</span>
               <h3>Como conduzir um atendimento consultivo com clientes de alta renda</h3>
               <p>Agilidade, precisao das informacoes e leitura correta do perfil sao decisivos para aumentar conversao e confianca.</p>
               <a class="btn btn-link" data-whatsapp-link href="#">Saiba mais</a>
+              </div>
             </article>
 
             <article class="blog-card reveal">
+              <div class="blog-card-media">
+                <img src="https://images.unsplash.com/photo-1448630360428-65456885c650?auto=format&fit=crop&w=1200&q=80" alt="Ambiente refinado com decoracao premium" />
+              </div>
+              <div class="blog-card-copy">
               <span>Branding</span>
               <h3>Por que autoridade de marca importa no mercado imobiliario premium</h3>
               <p>Uma comunicacao consistente reforca credibilidade, reduz atrito comercial e melhora a qualidade das oportunidades geradas.</p>
               <a class="btn btn-link" data-whatsapp-link href="#">Saiba mais</a>
+              </div>
             </article>
           </div>
         </div>
@@ -532,6 +572,59 @@
       </div>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-shell">
+      <div class="footer-brand-block">
+        <a class="brand footer-brand" href="#inicio" aria-label="LuxPrime Imoveis">
+          <span class="brand-mark">LP</span>
+          <span class="brand-copy">
+            <strong>LuxPrime Imoveis</strong>
+            <small>Consultoria imobiliaria para patrimonios de alto padrao</small>
+          </span>
+        </a>
+        <p>
+          Atuamos com residencias, mansoes, coberturas e ativos selecionados em enderecos valorizados,
+          conectando compradores, investidores e proprietarios com discricao e criterio.
+        </p>
+      </div>
+
+      <div class="footer-columns">
+        <div class="footer-column">
+          <span class="footer-title">Navegacao</span>
+          <a href="#inicio">Inicio</a>
+          <a href="#catalogo">Busca guiada</a>
+          <a href="#carrossel">Disponiveis</a>
+          <a href="#blog">Conteudo</a>
+          <a href="#contato">Atendimento</a>
+        </div>
+
+        <div class="footer-column">
+          <span class="footer-title">Especialidades</span>
+          <p>Mansoes em condominio</p>
+          <p>Coberturas de luxo</p>
+          <p>Casas de praia</p>
+          <p>Imoveis para investimento</p>
+        </div>
+
+        <div class="footer-column">
+          <span class="footer-title">Contato</span>
+          <p>WhatsApp comercial</p>
+          <a class="footer-phone" data-whatsapp-link href="#">(11) 96495-6563</a>
+          <p>Atendimento consultivo sob agendamento</p>
+          <a class="btn btn-primary footer-cta" data-whatsapp-link href="#">Solicitar atendimento</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>(c) 2026 LuxPrime Imoveis. Todos os direitos reservados.</p>
+      <div class="footer-bottom-links">
+        <a href="#blog">Blog</a>
+        <a href="#contato">Falar com a equipe</a>
+      </div>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
