@@ -24,9 +24,6 @@
           <path class="house-outline roof-outline" d="M30 76L80 34L130 76" />
           <path class="house-outline body-outline" d="M46 72V122H114V72" />
           <path class="house-outline door-outline" d="M72 122V92H88V122" />
-          <path class="house-fill" d="M80 44L54 66V116H106V66L80 44Z" />
-          <path class="house-window" d="M62 78H74V90H62Z" />
-          <path class="house-window" d="M86 78H98V90H86Z" />
           <path class="house-ground" d="M28 126H132" />
         </svg>
         <span class="loader-glow"></span>
@@ -44,7 +41,14 @@
     <div class="container">
       <div class="header-shell">
         <a class="brand" href="#inicio" aria-label="LuxPrime Imoveis">
-          <span class="brand-mark">LP</span>
+          <span class="brand-mark" aria-hidden="true">
+            <svg class="brand-house" viewBox="0 0 160 160">
+              <path class="brand-house-line" d="M30 76L80 34L130 76" />
+              <path class="brand-house-line" d="M46 72V122H114V72" />
+              <path class="brand-house-line" d="M72 122V92H88V122" />
+              <path class="brand-house-base" d="M28 126H132" />
+            </svg>
+          </span>
           <span class="brand-copy">
             <strong>LuxPrime Imoveis</strong>
             <small>Imoveis exclusivos em enderecos nobres</small>
@@ -577,7 +581,14 @@
     <div class="container footer-shell">
       <div class="footer-brand-block">
         <a class="brand footer-brand" href="#inicio" aria-label="LuxPrime Imoveis">
-          <span class="brand-mark">LP</span>
+          <span class="brand-mark" aria-hidden="true">
+            <svg class="brand-house" viewBox="0 0 160 160">
+              <path class="brand-house-line" d="M30 76L80 34L130 76" />
+              <path class="brand-house-line" d="M46 72V122H114V72" />
+              <path class="brand-house-line" d="M72 122V92H88V122" />
+              <path class="brand-house-base" d="M28 126H132" />
+            </svg>
+          </span>
           <span class="brand-copy">
             <strong>LuxPrime Imoveis</strong>
             <small>Consultoria imobiliaria para patrimonios de alto padrao</small>
@@ -609,22 +620,51 @@
 
         <div class="footer-column">
           <span class="footer-title">Contato</span>
-          <p>WhatsApp comercial</p>
-          <a class="footer-phone" data-whatsapp-link href="#">(11) 96495-6563</a>
-          <p>Atendimento consultivo sob agendamento</p>
+          <a class="footer-contact-link" data-whatsapp-link href="#">
+            <span class="footer-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M20.5 11.8c0 4.7-3.8 8.5-8.5 8.5-1.5 0-3-.4-4.2-1.1L3.5 20.5l1.4-4.1a8.4 8.4 0 0 1-1.4-4.6c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5Z"></path>
+                <path d="M9.2 8.6c.2-.5.4-.5.7-.5h.6c.2 0 .5 0 .7.5l.7 1.7c.1.3.1.5-.1.8l-.4.5c-.1.1-.2.3 0 .5.3.6 1 1.7 2.4 2.3.2.1.4 0 .5-.1l.6-.6c.2-.2.4-.2.7-.1l1.6.8c.3.1.5.2.5.5v.7c0 .3-.2.6-.4.8-.4.3-1 .6-1.9.4-1.1-.2-2.6-.8-4.2-2.4-1.9-1.8-2.5-3.5-2.7-4.6-.1-.8.2-1.4.5-1.8Z"></path>
+              </svg>
+            </span>
+            <span>
+              <strong>WhatsApp</strong>
+              <small>(11) 96495-6563</small>
+            </span>
+          </a>
+          <a class="footer-contact-link" href="https://instagram.com/futuradesign.br" target="_blank" rel="noopener noreferrer">
+            <span class="footer-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"></rect>
+                <circle cx="12" cy="12" r="4.1"></circle>
+                <circle cx="17.4" cy="6.7" r="1.1"></circle>
+              </svg>
+            </span>
+            <span>
+              <strong>Instagram</strong>
+              <small>Instagram.com/futuradesign.br</small>
+            </span>
+          </a>
+          <p>Atendimento consultivo sob agendamento e retorno rapido pelo canal preferido.</p>
           <a class="btn btn-primary footer-cta" data-whatsapp-link href="#">Solicitar atendimento</a>
         </div>
       </div>
     </div>
 
     <div class="container footer-bottom">
-      <p>(c) 2026 LuxPrime Imoveis. Todos os direitos reservados.</p>
+      <p>2026 LuxPrime Imoveis. Todos os direitos reservados.</p>
       <div class="footer-bottom-links">
         <a href="#blog">Blog</a>
         <a href="#contato">Falar com a equipe</a>
       </div>
     </div>
   </footer>
+
+  <div class="footer-credit">
+    <a href="https://agenciafuturadesign.com" target="_blank" rel="noopener noreferrer">
+      Desenvolvido por <strong>FUTURADESIGN</strong>
+    </a>
+  </div>
 
   <script src="script.js"></script>
 </body>

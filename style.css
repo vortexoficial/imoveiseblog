@@ -153,22 +153,6 @@ input {
   animation-delay: 0.65s;
 }
 
-.house-fill {
-  fill: var(--gold);
-  opacity: 0;
-  transform: scale(0.92);
-  transform-origin: center;
-  animation: houseFill 0.7s ease forwards;
-  animation-delay: 1.15s;
-}
-
-.house-window {
-  fill: rgba(247, 245, 240, 0.82);
-  opacity: 0;
-  animation: windowGlow 0.5s ease forwards;
-  animation-delay: 1.45s;
-}
-
 .loader-glow {
   position: absolute;
   inset: 36px;
@@ -198,28 +182,6 @@ input {
 
 @keyframes houseDraw {
   to { stroke-dashoffset: 0; }
-}
-
-@keyframes houseFill {
-  0% {
-    opacity: 0;
-    transform: scale(0.92);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes windowGlow {
-  0% {
-    opacity: 0;
-    transform: translateY(4px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 @keyframes glowPulse {
@@ -282,12 +244,28 @@ input {
   border-radius: 18px;
   display: grid;
   place-items: center;
-  background: linear-gradient(135deg, var(--gold-soft), var(--gold));
-  color: var(--dark);
-  font-family: "Outfit", sans-serif;
-  font-size: 1.1rem;
-  font-weight: 800;
+  background: linear-gradient(135deg, rgba(236, 215, 174, 0.14), rgba(205, 168, 98, 0.08));
+  border: 1px solid rgba(205, 168, 98, 0.2);
   box-shadow: 0 14px 34px rgba(205, 168, 98, 0.2);
+}
+
+.brand-house {
+  width: 30px;
+  height: 30px;
+  overflow: visible;
+}
+
+.brand-house-line,
+.brand-house-base {
+  fill: none;
+  stroke: var(--gold-soft);
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.brand-house-base {
+  stroke-width: 6;
 }
 
 .brand-copy {
@@ -1140,7 +1118,7 @@ input {
 }
 
 .site-footer {
-  padding: 34px 0 28px;
+  padding: 46px 0 22px;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   background:
     radial-gradient(circle at top left, rgba(205, 168, 98, 0.08), transparent 22%),
@@ -1151,11 +1129,8 @@ input {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.3fr);
   gap: 28px;
-  padding: 28px;
-  border-radius: 32px;
-  background: rgba(255, 255, 255, 0.035);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: var(--shadow);
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .footer-brand-block p,
@@ -1174,13 +1149,13 @@ input {
 .footer-columns {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
+  gap: 28px;
 }
 
 .footer-column {
   display: grid;
   align-content: start;
-  gap: 8px;
+  gap: 10px;
 }
 
 .footer-title {
@@ -1198,9 +1173,54 @@ input {
   font-weight: 700;
 }
 
+.footer-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text);
+}
+
+.footer-contact-link span:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.footer-contact-link strong {
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.footer-contact-link small {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.footer-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  flex: 0 0 42px;
+}
+
+.footer-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: var(--gold-soft);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .footer-cta {
   width: fit-content;
   margin-top: 8px;
+  color: var(--dark);
 }
 
 .footer-bottom {
@@ -1215,6 +1235,22 @@ input {
   display: flex;
   flex-wrap: wrap;
   gap: 18px;
+}
+
+.footer-credit {
+  padding: 14px 16px 30px;
+  text-align: center;
+}
+
+.footer-credit a {
+  color: rgba(247, 245, 240, 0.72);
+  font-size: 0.88rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.footer-credit strong {
+  color: var(--gold-soft);
 }
 
 @media (max-width: 1120px) {
@@ -1355,13 +1391,35 @@ input {
     grid-template-columns: 1fr;
   }
 
+  .footer-brand-block,
+  .footer-column,
+  .footer-bottom,
+  .footer-credit {
+    text-align: center;
+  }
+
+  .footer-brand,
+  .footer-bottom-links,
+  .footer-contact-link {
+    justify-content: center;
+  }
+
+  .footer-column {
+    justify-items: center;
+  }
+
+  .footer-contact-link span:last-child {
+    align-items: center;
+    text-align: center;
+  }
+
   .footer-shell {
-    padding: 22px;
+    padding-bottom: 22px;
   }
 
   .footer-bottom {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .footer-cta {
