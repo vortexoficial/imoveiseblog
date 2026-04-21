@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LuxPrime Imoveis | Imoveis de Alto Padrao</title>
+  <meta
+    name="description"
+    content="Imobiliaria premium com selecao de imoveis de alto padrao, atendimento consultivo e conteudo especializado sobre o mercado."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="is-loading">
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <div class="loader-stage">
+      <div class="loader-rings">
+        <span class="loader-ring loader-ring-a"></span>
+        <span class="loader-ring loader-ring-b"></span>
+        <span class="loader-ring loader-ring-c"></span>
+        <span class="loader-core"></span>
+      </div>
+      <div class="loader-copy">
+        <strong>LuxPrime</strong>
+        <span>Preparando experiencias imobiliarias exclusivas</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="menu-backdrop" id="menuBackdrop"></div>
+
+  <header class="site-header" id="header">
+    <div class="container">
+      <div class="header-shell">
+        <a class="brand" href="#inicio" aria-label="LuxPrime Imoveis">
+          <span class="brand-mark">LP</span>
+          <span class="brand-copy">
+            <strong>LuxPrime Imoveis</strong>
+            <small>Imoveis exclusivos em enderecos nobres</small>
+          </span>
+        </a>
+
+        <div class="header-actions">
+          <a class="btn btn-soft header-cta" data-whatsapp-link href="#">Falar com consultor</a>
+          <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="menuDrawer"
+            aria-label="Abrir menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <aside class="menu-drawer" id="menuDrawer" aria-hidden="true">
+    <div class="menu-drawer-head">
+      <span class="menu-kicker">Menu</span>
+      <button class="menu-close" id="menuClose" type="button" aria-label="Fechar menu">Fechar</button>
+    </div>
+
+    <nav class="drawer-nav" aria-label="Menu principal">
+      <a class="drawer-link" href="#inicio">Inicio</a>
+      <a class="drawer-link" href="#catalogo">Filtros</a>
+      <a class="drawer-link" href="#carrossel">Disponiveis</a>
+      <a class="drawer-link" href="#destaques">Destaques</a>
+      <a class="drawer-link" href="#blog">Blog</a>
+      <a class="drawer-link" href="#contato">Contato</a>
+    </nav>
+
+    <div class="drawer-card">
+      <strong>Atendimento reservado para compradores e investidores.</strong>
+      <p>Receba orientacao personalizada, opcoes aderentes ao seu perfil e suporte completo nas proximas etapas.</p>
+      <a class="btn btn-primary drawer-cta" data-whatsapp-link href="#">Iniciar atendimento</a>
+    </div>
+  </aside>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow-pill">Imoveis de alto padrao</span>
+          <h1>Residencias exclusivas para quem valoriza endereco, arquitetura e patrimonio.</h1>
+          <p>
+            Descubra casas, mansoes e coberturas selecionadas para clientes que buscam conforto, privacidade,
+            valorizacao patrimonial e atendimento consultivo em cada etapa da jornada.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" data-whatsapp-link href="#">Solicitar catalogo</a>
+            <a class="btn btn-outline" data-whatsapp-link href="#">Agendar atendimento</a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <article class="hero-card">
+            <div class="hero-media">
+              <img
+                src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1400&q=80"
+                alt="Mansao contemporanea com fachada iluminada"
+              />
+              <div class="hero-badge-stack">
+                <span class="property-chip">Residencia exclusiva</span>
+                <span class="glass-chip">Atendimento sob medida</span>
+              </div>
+            </div>
+
+            <div class="hero-card-content">
+              <div class="hero-card-top">
+                <div>
+                  <p class="card-label">Propriedade em destaque</p>
+                  <h2>Mansao Solaris Prime</h2>
+                </div>
+                <strong class="hero-price">R$ 14.900.000</strong>
+              </div>
+
+              <div class="hero-card-specs">
+                <span>980 m2</span>
+                <span>6 suites</span>
+                <span>8 vagas</span>
+                <span>Alphaville, SP</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="search-panel-section reveal" id="catalogo">
+      <div class="container">
+        <div class="search-panel">
+          <div class="search-panel-copy">
+            <span class="section-kicker">Busca guiada</span>
+            <h2>Encontre o imovel ideal com filtros claros e uma selecao orientada pelo seu perfil.</h2>
+            <p>Refine a busca por tipo, regiao, faixa de valor e objetivo de compra para localizar oportunidades alinhadas ao seu momento.</p>
+          </div>
+
+          <form class="search-form" action="#" method="get">
+            <div class="custom-field" data-select>
+              <input type="hidden" name="tipo" value="Todos os tipos" />
+              <span class="field-label">Tipo de imovel</span>
+              <button class="select-trigger" type="button" aria-expanded="false">
+                <span class="select-value">Todos os tipos</span>
+                <span class="select-arrow"></span>
+              </button>
+              <div class="select-menu" role="listbox">
+                <button class="select-option is-selected" type="button" data-value="Todos os tipos">Todos os tipos</button>
+                <button class="select-option" type="button" data-value="Mansao">Mansao</button>
+                <button class="select-option" type="button" data-value="Cobertura">Cobertura</button>
+                <button class="select-option" type="button" data-value="Casa em condominio">Casa em condominio</button>
+                <button class="select-option" type="button" data-value="Penthouse">Penthouse</button>
+              </div>
+            </div>
+
+            <div class="custom-field" data-select>
+              <input type="hidden" name="localizacao" value="Todas as regioes" />
+              <span class="field-label">Localizacao</span>
+              <button class="select-trigger" type="button" aria-expanded="false">
+                <span class="select-value">Todas as regioes</span>
+                <span class="select-arrow"></span>
+              </button>
+              <div class="select-menu" role="listbox">
+                <button class="select-option is-selected" type="button" data-value="Todas as regioes">Todas as regioes</button>
+                <button class="select-option" type="button" data-value="Sao Paulo">Sao Paulo</button>
+                <button class="select-option" type="button" data-value="Rio de Janeiro">Rio de Janeiro</button>
+                <button class="select-option" type="button" data-value="Bahia">Bahia</button>
+                <button class="select-option" type="button" data-value="Goias">Goias</button>
+              </div>
+            </div>
+
+            <div class="custom-field" data-select>
+              <input type="hidden" name="preco" value="Qualquer valor" />
+              <span class="field-label">Faixa de preco</span>
+              <button class="select-trigger" type="button" aria-expanded="false">
+                <span class="select-value">Qualquer valor</span>
+                <span class="select-arrow"></span>
+              </button>
+              <div class="select-menu" role="listbox">
+                <button class="select-option is-selected" type="button" data-value="Qualquer valor">Qualquer valor</button>
+                <button class="select-option" type="button" data-value="Ate R$ 8 mi">Ate R$ 8 mi</button>
+                <button class="select-option" type="button" data-value="R$ 8 mi a R$ 15 mi">R$ 8 mi a R$ 15 mi</button>
+                <button class="select-option" type="button" data-value="R$ 15 mi a R$ 25 mi">R$ 15 mi a R$ 25 mi</button>
+                <button class="select-option" type="button" data-value="Acima de R$ 25 mi">Acima de R$ 25 mi</button>
+              </div>
+            </div>
+
+            <div class="custom-field" data-select>
+              <input type="hidden" name="perfil" value="Selecionar perfil" />
+              <span class="field-label">Perfil</span>
+              <button class="select-trigger" type="button" aria-expanded="false">
+                <span class="select-value">Selecionar perfil</span>
+                <span class="select-arrow"></span>
+              </button>
+              <div class="select-menu" role="listbox">
+                <button class="select-option is-selected" type="button" data-value="Selecionar perfil">Selecionar perfil</button>
+                <button class="select-option" type="button" data-value="Para morar">Para morar</button>
+                <button class="select-option" type="button" data-value="Para investir">Para investir</button>
+                <button class="select-option" type="button" data-value="Segunda residencia">Segunda residencia</button>
+              </div>
+            </div>
+
+            <a class="btn btn-primary search-submit" data-whatsapp-link href="#">Buscar oportunidades</a>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="carousel-section" id="carrossel">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-kicker">Residencias disponiveis</span>
+          <h2>Conheca algumas das propriedades em evidencia no catalogo atual.</h2>
+          <p>Uma selecao de imoveis em localizacoes desejadas, com perfis que atendem moradia, segunda residencia e investimento.</p>
+        </div>
+      </div>
+
+      <div class="property-marquee">
+        <div class="marquee-track">
+          <article class="marquee-card">
+            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=80" alt="Casa com piscina e fachada elegante" />
+            <div class="marquee-copy">
+              <span>Praia</span>
+              <strong>Golden Coast Villa</strong>
+              <p>Alagoas</p>
+            </div>
+          </article>
+
+          <article class="marquee-card">
+            <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=900&q=80" alt="Residencia moderna em condominio" />
+            <div class="marquee-copy">
+              <span>Condominio</span>
+              <strong>Nobile Essence</strong>
+              <p>Minas Gerais</p>
+            </div>
+          </article>
+
+          <article class="marquee-card">
+            <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=900&q=80" alt="Cobertura moderna com area social ampla" />
+            <div class="marquee-copy">
+              <span>Cobertura</span>
+              <strong>Aurora Grand Loft</strong>
+              <p>Sao Paulo</p>
+            </div>
+          </article>
+
+          <article class="marquee-card">
+            <img src="https://images.unsplash.com/photo-1600566753151-384129cf4e3e?auto=format&fit=crop&w=900&q=80" alt="Mansao com arquitetura de luxo e gramado" />
+            <div class="marquee-copy">
+              <span>Mansao</span>
+              <strong>Imperial Horizon</strong>
+              <p>Rio de Janeiro</p>
+            </div>
+          </article>
+
+          <article class="marquee-card">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=80" alt="Casa contemporanea de luxo iluminada ao anoitecer" />
+            <div class="marquee-copy">
+              <span>Residencia</span>
+              <strong>Solaris Prime</strong>
+              <p>Alphaville</p>
+            </div>
+          </article>
+
+          <article class="marquee-card">
+            <img src="https://images.unsplash.com/photo-1605146768851-eda79da39897?auto=format&fit=crop&w=900&q=80" alt="Casa moderna com fachada escura e linhas sofisticadas" />
+            <div class="marquee-copy">
+              <span>Autoral</span>
+              <strong>Maison du Soleil</strong>
+              <p>Goias</p>
+            </div>
+          </article>
+
+          <article class="marquee-card" aria-hidden="true">
+            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=80" alt="" />
+            <div class="marquee-copy">
+              <span>Praia</span>
+              <strong>Golden Coast Villa</strong>
+              <p>Alagoas</p>
+            </div>
+          </article>
+
+          <article class="marquee-card" aria-hidden="true">
+            <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=900&q=80" alt="" />
+            <div class="marquee-copy">
+              <span>Condominio</span>
+              <strong>Nobile Essence</strong>
+              <p>Minas Gerais</p>
+            </div>
+          </article>
+
+          <article class="marquee-card" aria-hidden="true">
+            <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=900&q=80" alt="" />
+            <div class="marquee-copy">
+              <span>Cobertura</span>
+              <strong>Aurora Grand Loft</strong>
+              <p>Sao Paulo</p>
+            </div>
+          </article>
+
+          <article class="marquee-card" aria-hidden="true">
+            <img src="https://images.unsplash.com/photo-1600566753151-384129cf4e3e?auto=format&fit=crop&w=900&q=80" alt="" />
+            <div class="marquee-copy">
+              <span>Mansao</span>
+              <strong>Imperial Horizon</strong>
+              <p>Rio de Janeiro</p>
+            </div>
+          </article>
+
+          <article class="marquee-card" aria-hidden="true">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=80" alt="" />
+            <div class="marquee-copy">
+              <span>Residencia</span>
+              <strong>Solaris Prime</strong>
+              <p>Alphaville</p>
+            </div>
+          </article>
+
+          <article class="marquee-card" aria-hidden="true">
+            <img src="https://images.unsplash.com/photo-1605146768851-eda79da39897?auto=format&fit=crop&w=900&q=80" alt="" />
+            <div class="marquee-copy">
+              <span>Autoral</span>
+              <strong>Maison du Soleil</strong>
+              <p>Goias</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="destaques">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-kicker">Diferenciais</span>
+          <h2>Atendimento consultivo, curadoria rigorosa e apresentacao alinhada ao segmento premium.</h2>
+          <p>Cada propriedade e apresentada com foco em valor, contexto e informacoes relevantes para uma decisao segura.</p>
+        </div>
+
+        <div class="benefits-grid">
+          <article class="benefit-card reveal">
+            <span>01</span>
+            <h3>Curadoria criteriosa</h3>
+            <p>Selecionamos imoveis com localizacao, arquitetura, liquidez e padrao de acabamento coerentes com o mercado de alto padrao.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <span>02</span>
+            <h3>Atendimento consultivo</h3>
+            <p>Compreenda opcoes aderentes ao seu objetivo com suporte proximo, discreto e orientado por perfil de compra.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <span>03</span>
+            <h3>Negociacao qualificada</h3>
+            <p>Da primeira conversa a visita, cada etapa e conduzida para reduzir ruido e acelerar decisoes com mais seguranca.</p>
+          </article>
+        </div>
+
+        <div class="listing-grid">
+          <article class="listing-card reveal">
+            <div class="listing-media">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="Casa de luxo em condominio" />
+              <span class="property-chip">Condominio</span>
+            </div>
+            <div class="listing-content">
+              <div class="listing-topline">
+                <div>
+                  <h3>Maison du Soleil</h3>
+                  <p>Vale Imperial, GO</p>
+                </div>
+                <strong>R$ 9.800.000</strong>
+              </div>
+              <div class="listing-meta">
+                <span>600 m2</span>
+                <span>4 suites</span>
+                <span>4 vagas</span>
+              </div>
+              <p>Residencia com ambientes integrados, area gourmet completa e atmosfera elegante para morar ou receber com conforto.</p>
+              <div class="listing-actions">
+                <a class="btn btn-dark" data-whatsapp-link href="#">Agendar visita</a>
+                <a class="btn btn-link" data-whatsapp-link href="#">Solicitar informacoes</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="listing-card reveal">
+            <div class="listing-media">
+              <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1200&q=80" alt="Cobertura de luxo com vista panoramica" />
+              <span class="property-chip">Cobertura</span>
+            </div>
+            <div class="listing-content">
+              <div class="listing-topline">
+                <div>
+                  <h3>Aurora Grand Loft</h3>
+                  <p>Bela Vista Nobre, SP</p>
+                </div>
+                <strong>R$ 11.400.000</strong>
+              </div>
+              <div class="listing-meta">
+                <span>430 m2</span>
+                <span>3 suites</span>
+                <span>4 vagas</span>
+              </div>
+              <p>Cobertura contemporanea com rooftop privativo, automacao residencial e vista aberta em uma das regioes mais desejadas da cidade.</p>
+              <div class="listing-actions">
+                <a class="btn btn-dark" data-whatsapp-link href="#">Agendar visita</a>
+                <a class="btn btn-link" data-whatsapp-link href="#">Solicitar informacoes</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="listing-card reveal">
+            <div class="listing-media">
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80" alt="Mansao moderna com piscina" />
+              <span class="property-chip">Mansao</span>
+            </div>
+            <div class="listing-content">
+              <div class="listing-topline">
+                <div>
+                  <h3>Imperial Horizon House</h3>
+                  <p>Riviera Palace, RJ</p>
+                </div>
+                <strong>R$ 16.200.000</strong>
+              </div>
+              <div class="listing-meta">
+                <span>810 m2</span>
+                <span>5 suites</span>
+                <span>6 vagas</span>
+              </div>
+              <p>Projeto autoral com volumetria imponente, amplas aberturas e infraestrutura completa para quem busca exclusividade.</p>
+              <div class="listing-actions">
+                <a class="btn btn-dark" data-whatsapp-link href="#">Agendar visita</a>
+                <a class="btn btn-link" data-whatsapp-link href="#">Solicitar informacoes</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section blog-section" id="blog">
+      <div class="container">
+        <div class="blog-header reveal">
+          <div>
+            <span class="section-kicker">Conteudo e mercado</span>
+            <h2>Analises, tendencias e orientacoes para compradores, investidores e proprietarios.</h2>
+          </div>
+          <p>Conteudo editorial fortalece a autoridade da marca e ajuda o cliente a tomar decisoes com mais repertorio e seguranca.</p>
+        </div>
+
+        <div class="blog-layout">
+          <article class="blog-feature reveal">
+            <div class="blog-feature-media">
+              <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1400&q=80" alt="Interior sofisticado de imovel premium" />
+            </div>
+            <div class="blog-feature-copy">
+              <span>Mercado de luxo</span>
+              <h3>O que compradores de alto padrao avaliam antes de decidir por um imovel</h3>
+              <p>Localizacao, privacidade, qualidade construtiva, potencial de valorizacao e liquidez seguem entre os fatores que mais pesam na decisao.</p>
+              <a class="btn btn-primary" data-whatsapp-link href="#">Falar com especialista</a>
+            </div>
+          </article>
+
+          <div class="blog-grid">
+            <article class="blog-card reveal">
+              <span>Arquitetura</span>
+              <h3>Tendencias de fachadas contemporaneas para residencias exclusivas</h3>
+              <p>Volumes bem definidos, materiais nobres e iluminacao arquitetonica continuam entre os principais destaques do segmento.</p>
+              <a class="btn btn-link" data-whatsapp-link href="#">Saiba mais</a>
+            </article>
+
+            <article class="blog-card reveal">
+              <span>Mercado</span>
+              <h3>Como localizacao e escassez influenciam o valor de um imovel premium</h3>
+              <p>Endereco, privacidade e oferta limitada ajudam a sustentar demanda e valorizacao em regioes consolidadas.</p>
+              <a class="btn btn-link" data-whatsapp-link href="#">Saiba mais</a>
+            </article>
+
+            <article class="blog-card reveal">
+              <span>Investimento</span>
+              <h3>O que observar antes de investir em uma casa de alto padrao</h3>
+              <p>Liquidez, padrao construtivo, manutencao e perspectiva de crescimento da regiao merecem analise detalhada.</p>
+              <a class="btn btn-link" data-whatsapp-link href="#">Saiba mais</a>
+            </article>
+
+            <article class="blog-card reveal">
+              <span>Interiores</span>
+              <h3>Ambientes integrados seguem em alta nas residencias de luxo</h3>
+              <p>Plantas abertas, conexao com a area externa e solucao de automacao elevam conforto e experiencia de uso.</p>
+              <a class="btn btn-link" data-whatsapp-link href="#">Saiba mais</a>
+            </article>
+
+            <article class="blog-card reveal">
+              <span>Vendas</span>
+              <h3>Como conduzir um atendimento consultivo com clientes de alta renda</h3>
+              <p>Agilidade, precisao das informacoes e leitura correta do perfil sao decisivos para aumentar conversao e confianca.</p>
+              <a class="btn btn-link" data-whatsapp-link href="#">Saiba mais</a>
+            </article>
+
+            <article class="blog-card reveal">
+              <span>Branding</span>
+              <h3>Por que autoridade de marca importa no mercado imobiliario premium</h3>
+              <p>Uma comunicacao consistente reforca credibilidade, reduz atrito comercial e melhora a qualidade das oportunidades geradas.</p>
+              <a class="btn btn-link" data-whatsapp-link href="#">Saiba mais</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contato">
+      <div class="container">
+        <div class="contact-banner reveal">
+          <div>
+            <span class="section-kicker">Atendimento exclusivo</span>
+            <h2>Fale com nossa equipe e receba um atendimento personalizado.</h2>
+            <p>Compartilhe sua faixa de investimento, regiao de interesse e objetivo de compra para receber opcoes aderentes ao seu perfil.</p>
+          </div>
+          <div class="contact-actions">
+            <a class="btn btn-primary" data-whatsapp-link href="#">Abrir WhatsApp</a>
+            <a class="btn btn-outline" data-whatsapp-link href="#">Solicitar catalogo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
